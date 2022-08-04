@@ -11,4 +11,13 @@ public class AppConfig {
         helloWorld.setMessage("Hello World!");
         return helloWorld;
     }
+    @Bean(
+            name = {"whoSayGav"}
+    )
+    @Scope("prototype")
+    public Cat getWhoSayGav() {
+        Cat cat = new Cat();
+        cat.setSayNotGaf("Miay-y");
+        return cat;
+    }
 }
